@@ -1,0 +1,333 @@
+@font-face {
+    font-family: 'MaPolicePerso';
+    src: url('fonts/poppins.woff2') format('woff2'),
+    url('fonts/poppins.woff') format('woff'),
+    url('fonts/poppins.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,body{
+    height: 100%;              
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex:1;
+}
+body {
+    font-family: 'MaPolicePerso', sans-serif;
+    background-color: #ffffff;
+    color: #67645e;
+    margin:0;
+}
+
+header{
+    font-family: 'MaPolicePerso', sans-serif;
+    background-color: #f1f0ed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 1%; /* petit espace intérieur */
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logo img{
+    height: 10vh;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: #67645e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.hero {
+    position: relative;
+    width: 100%;            /* largeur légèrement réduite */
+    height: 90vh;          /* moins que 100vh */
+    overflow: hidden;      /* nécessaire pour border-radius */
+
+}
+
+#bg-video {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'MaPolicePerso', sans-serif;
+    background-color: rgba(250, 250, 250, 0.7);
+    padding: 2%;
+    border-radius: 10px; /* coins légèrement arrondis pour le texte */
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    margin: 0;
+}
+
+footer {
+    background-color: #f1f0ed;
+    height: auto;
+}
+
+#logoFooter{
+    height: 25vh;
+
+}
+footer a {
+    color: #67645e;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+footer a:hover{
+    text-decoration: underline;
+
+}
+
+.footerObj{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-top: 2%;
+}
+
+
+.contactFooter img {
+    height:3vh
+}
+
+.menuFooter {
+    display:flex;
+    flex-direction: column;
+}
+
+.copyright{
+    text-align: center;
+}
+
+
+.loisir, .qualites,.mesProjets{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.loisir h2:after, .qualites h2:after,.cursus:after, .mesProjets:after  {
+    content: "";
+    display: block;
+    width: 10%;            
+    height: 2px;
+    background: #67645e;
+    margin-top: 5px;       
+    margin-left: auto;     
+    margin-right: auto;
+}
+
+.detail img {
+    width: 7vh;
+}
+
+.loisir p {
+    font-size: small;
+}
+
+.detail{
+    display : flex;
+    justify-content: center;   
+    gap:10%
+}
+
+.detail div{
+    width: 25vh;
+    border-radius: 10px;
+    background-color:#f1f0ed ;
+    padding: 2% 2% 0% 2%;
+    margin-bottom: 4%;
+    
+
+    
+}
+
+#f1Img{
+    height: 49px;
+    width: auto;
+}
+.presentation{
+    display: flex;
+    justify-content: space-around;
+    padding: 2%;
+}
+.presentation div {
+    background-color: #f1f0ed;
+    border-radius: 10px;
+    padding-left: 2%;
+    padding-right: 2%;
+    max-width: 35%;
+    margin-left: auto;
+    margin-right: 5%;
+}
+
+.presentation h4{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#monAvatar{
+    max-height: 35vh;
+    margin-right: auto;
+    align-self: center;
+}
+.ecole{
+    display: grid;
+    grid-template-columns: auto 50vh auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ecole h2{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    align-self: left;
+}
+.ecole div {
+    background-color: #f1f0ed;
+    border-radius: 10px;
+    width: 40vh;
+    padding: 2%;    
+}
+
+.ecole p {
+    font-size: small;
+    line-height: 1.2;
+}
+.ecole h3,.ecole h4{
+    margin: 0px;
+}
+
+.ecole img {
+    width: 50vh;
+    border-radius: 10px;
+    margin-bottom: 5%;
+}
+
+#lyceeImg{
+    grid-column: 2;
+    
+}
+
+.iut{
+    margin-right: 4%;
+    justify-self: end;
+}
+.lycee{
+    margin-left: 4%;
+    justify-self: start;
+}
+
+.cursus{
+    text-align: center;
+    
+}
+
+.projets{
+    display:grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto auto auto ;
+    justify-content: space-around;
+}
+
+.projets p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 1%;
+
+}
+
+.description{
+    border-radius: 10px;
+    background-color:#f1f0ed ;
+    padding: 2% 2% 0% 2%;
+    margin: 5%;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projets img {
+    max-width: 75%;
+ 
+}
+
+.description div {
+    margin:0px;
+    text-align: center;
+}
+
+#github{
+    height:100%;
+}
+
+.date{
+    font-size: small;
+}
+
+.description h3{
+    margin:0px;
+    margin-top: 1%;
+}
+
+.description a{
+    height:5vh;
+    margin-top: auto;
+}
+.description img{
+    max-height: 20vh;
+}
+
+.Contact img {
+    max-height: 10vh;
+}
+.Contact{
+    height: 90vh;
+    margin-left: 2%;
+}
+
+.Contact a {
+    color: #67645e;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+.Contact a:hover{
+    text-decoration: underline;
+
+}
