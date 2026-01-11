@@ -96,6 +96,7 @@ footer {
 
 #logoFooter{
     height: 25vh;
+    align-self: center;
 }
 
 footer a {
@@ -115,6 +116,10 @@ footer a:hover{
     padding-top: 2%;
 }
 
+.contactFooter h3{
+    margin-top: 0;
+
+}
 .contactFooter img {
     height:3vh
 }
@@ -138,7 +143,7 @@ footer a:hover{
 
 
 
-.loisir h2:after, .qualites h2:after,.cursus:after, .mesProjets h2:after, .competences h2:after {
+.loisir h2:after, .qualites h2:after,.cursus:after, .mesProjets:after, .competences h2:after {
     content: "";
     display: block;
     width: 10%;            
@@ -191,6 +196,7 @@ footer a:hover{
 .presentation div {
     padding-left: 2%;
     padding-right: 2%;
+    padding-bottom: 2%;
     max-width: 35%;
     margin-left: auto;
     margin-right: 5%;
@@ -201,6 +207,18 @@ footer a:hover{
                -5px -5px 10px #ffffff;
 }
 
+.presentation a.btn-cv {
+    padding: 8px 15px;
+    background-color: #67645e;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.presentation a.btn-cv:hover {
+    background-color: #504d48;
+}
 .presentation h4{
     margin-top: 0;
     margin-bottom: 0;
@@ -213,11 +231,10 @@ footer a:hover{
 }
 .ecole{
     display: grid;
-    grid-template-columns: auto 50vh auto;
-    grid-template-rows: auto auto;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    justify-items: center;
+    align-items: start;
 }
 
 .ecole h2{
@@ -226,8 +243,10 @@ footer a:hover{
     align-self: left;
 }
 .ecole div {
-    width: 40vh;
-    margin: 2%;    
+    width: 100%;
+    max-width: 350px;  
+    margin: 0;  
+    text-align: center;
 }
 
 .ecole p {
@@ -239,9 +258,9 @@ footer a:hover{
 }
 
 .ecole img {
-    width: 50vh;
-    border-radius: 10px;
-    margin-bottom: 5%;
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
 }
 
 #lyceeImg{
@@ -269,6 +288,9 @@ footer a:hover{
      transition: all 0.3s ease;
 }
 
+.iut, .lycee {
+    padding: 1rem 1.2rem;
+}
 
 .iut:hover , .lycee:hover{
     transform: translateY(-5px); /* Soulèvement au lieu de simple scale */
@@ -419,51 +441,20 @@ footer a:hover{
     font-weight: bold;
 }
 
-
-
-/* Mise en page responsive pour petit écran */
 @media (max-width: 768px) {
 
     .ecole {
-        display: grid;
-        grid-template-columns: 1fr 1fr; 
-        grid-template-rows: auto auto; 
-        gap: 15px;
-        align-items: center;
-        justify-items: center;
+        grid-template-columns: 1fr;
     }
 
-    .iut {
-        grid-column: 1;
-        grid-row: 1;
+    .iut, .lycee {
+        order: 1;
         width: 100%;
-    }
-
-    .ecole img:nth-of-type(1) {
-        grid-column: 2;
-        grid-row: 1;
-        width: 100%;
-    }
-
-    #lyceeImg {
-        grid-column: 1;
-        grid-row: 2;
-        width: 100%;
-    }
-
-    .lycee {
-        grid-column: 2;
-        grid-row: 2;
-        width: 100%;
-    }
-
-    .ecole div {
-        width: 90%;
-        text-align: center;
     }
 
     .ecole img {
-        border-radius: 10px;
+        order: 2;
+        width: 100%;
+        max-width: 300px;
     }
 }
-
